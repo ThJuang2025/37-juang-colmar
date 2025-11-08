@@ -1,3 +1,8 @@
+/* === BASE TYPOGRAPHY === */
+html {
+  font-size: 16px; 
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -6,7 +11,7 @@ body {
   color: #333;
       }
 
-/* === SECTION 1: HEADER === */
+/* =============== SECTION 1: HEADER =============== */
 .desktop-menu {
   display: flex;
   justify-content: space-between;
@@ -37,7 +42,6 @@ body {
 }
 
 .menu-area a {
-  /* gap: 16px; */
   text-decoration:none;
   display: inline-block;
   font-size: 20px;
@@ -81,93 +85,93 @@ body {
   }
 }
 
-/* === HERO SECTION: Desktop View (≥768px) === */
+/* =============== SECTION:2 HERO ## Desktop View (≥768px) ## =============== */
 .hero {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 32px;
-  gap: 32px;
-  background-color: #f2f2f2; /* ✅ สีเทาอ่อนตาม mockup */
+  align-items: center; 
+  background-color: #f2f2f2; 
+  height:auto;
 }
 
 .hero img {
-  width: 60%;              /* ✅ ภาพด้านซ้าย 60% */
+  width: 60%;
   height: auto;
+  padding: 32px 24px;
   object-fit: cover;
 }
 
 .hero-text {
-  width: 40%;              /* ✅ ข้อความด้านขวา 40% */
-  display: flex;
+  display: flex; 
+  width: 35%;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
+  color:#555555;
+  gap:2rem ;
 }
 
 .hero-text h1 {
-  font-size: 32px;
-  margin-bottom: 16px;     /* ✅ ระยะห่างจากหัวข้อถึงข้อความ */
-  line-height: 1.4;
+  margin:0;
+  font-size: 2.75rem;
 }
 
 .hero-text p {
-  font-size: 18px;
-  margin-bottom: 32px;     /* ✅ ระยะห่างจากข้อความถึงปุ่ม */
-  line-height: 1.6;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight:500;
 }
 
 .start-button {
-  display: inline-flex;             /* ✅ ใช้ flex เพื่อจัดข้อความในปุ่ม */
-  align-items: center;             /* ✅ จัดกลางแนวตั้ง */
-  justify-content: center;         /* ✅ จัดกลางแนวนอน */
-  height: 24px;                    /* ✅ ความสูงของปุ่ม */
-  padding: 0 24px;                 /* ✅ ขอบซ้าย-ขวา */
-  background-color: #0e0000;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.start-button:hover {
-  background-color: #333;
+  margin:0;
+  width: 90%;
+  display: inline-flex;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color:#555555;
+  color: #f7f8fa;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 /* === RESPONSIVE: Mobile View (<768px) === */
 @media (max-width: 767px) {
   .hero {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 32px 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  .hero-text {
+
+    width: 100%;
+    justify-content: left;
   }
 
   .hero img {
     width: 100%;
-    margin-bottom: 32px;
-  }
-
-  .hero-text {
-    width: 100%;
-    padding: 0;
   }
 
   .hero-text h1 {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 2.5rem;
+    margin: 0px 16px;
   }
 
   .hero-text p {
-    font-size: 16px;
-    margin-bottom: 32px;
+    font-size: 1.25rem;
+    margin-left: 16px;
   }
 
   .start-button {
-    font-size: 16px;
-    height: 24px;
-    line-height: 24px;
-    padding: 0 20px;
-  }
+    font-size: 1rem;
+    margin: 0px 16px 32px;
+    align-items: center;
+    padding: 8px 0;
+    font-weight: bold;
+    height: auto;
+   }
 }
